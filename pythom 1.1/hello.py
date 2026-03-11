@@ -343,11 +343,51 @@ else:
     print("low 10 and hight 20")
 
 #Blucles/loops and cicles
+#loops mecanisco de iteracion = repeticion
 
-
-
+#While
+my_condiction = 0
+ 
+while my_condiction < 10:
+    print(my_condiction)
+    my_condiction += 1
+else: #is optional
+    print("Mi condicion es mayor o igual que 10")
 #
 
+while my_condiction < 20:
+    my_condiction  += 1
+    if my_condiction == 15:
+        print("Se detiene la ejecucion")
+        break
+    print(my_condiction)
+
+#for iteracion de estado de elementos se usa en listas
+my_list = [1, 2, 3, 4]
+
+for element in my_list:
+    print(element)
+
+
+for element in my_dict:
+    print(element)
+    if element == "years":
+        break
+    print("Se ejecuta")
+else:
+    print("El bucle for para diccionario ha finalizado")
+
+for element in my_dict:
+    print(element)
+    if element == "years":
+        continue
+    else:
+        print("Se ejecuta")
+else:
+    print("El bucle for para diccionario ha finalizado")
+
+for element in list(my_dict.values()):
+    print(element)
 user = {
     "Alejandro":"123"
 }
@@ -359,8 +399,9 @@ if username in user and user[username] == password:
 else:
     print("incorrect Username or Password")
 
-#For and While
+#functions
 
+"def my_function ():"
 
 
 #class    

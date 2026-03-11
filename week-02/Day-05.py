@@ -57,3 +57,25 @@ if Name_u in info_user["name"] and Password_u == info_user["password"]:
     print(f"Welcome {Name_u}")
 else: 
     print("incorrect Password or Username")
+
+#Use of list
+
+hobbies = ["Coding", "Gym", "Reading"]
+hobbies.append("Gaming")        # Adds to the end
+hobbies.insert(0, "Meditation") # Adds at a specific index
+hobbies.pop(2)                  # Removes item at index 2
+print(f"My Hobbies: {hobbies}")
+print(hobbies[2]) #start in 0 to 1,2,3...
+
+
+#Use of Tuple
+coordinates = (4.7110, -74.0721) # Bogotá Coords
+print(f"Location: Latitude {coordinates[0]}, Longitude {coordinates[1]}")
+# coordinates[0] = 5.0 <-- This would raise a TypeError!
+
+
+#Use of Sets
+tags = {"health", "wellness", "mindfulness", "health"} 
+print(f"Clean Tags: {tags}") # 'health' will only appear once
+tags.add("fitness")
+tags.remove("wellness")
