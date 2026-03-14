@@ -399,6 +399,114 @@ if username in user and user[username] == password:
 else:
     print("incorrect Username or Password")
 
+#Example in class
+Hora = 0
+min = 0
+sec = 0
+
+while sec < 60:
+    sec += 1
+    print(f"Current time: {Hora:02d}:{min:02d}:{sec:02d}")
+    if sec == 60:
+        sec = 0
+        min += 1
+        print(f"New minute: {Hora:02d}:{min:02d}:{sec:02d}")
+        if min == 60:
+            min = 0
+            Hora += 1
+            print(f"New hour: {Hora:02d}:{min:02d}:{sec:02d}")
+            if Hora == 24:
+                break
+                
+# Basic while: counts from 1 to 5
+counter = 1
+while counter <= 5:
+    print("Count:", counter, end = " ") #end es para no saltar de linea
+    counter += 1  # IMPORTANT: always update the variable, or it loops forever!
+
+# While with break: stops when it finds number 3
+number = 0
+while True:
+    number += 1
+    if number == 3:
+        print("Found the number 3, stopping!")
+        break
+
+# While with continue: skips number 4
+num = 0
+while num < 6:
+    num += 1
+    if num == 4:
+        continue  # skip printing 4
+    print("Number:", num)
+
+
+# ---- FOR LOOP ----
+'''
+for variable in sequence:
+    print    (This is the structure of for loop.)
+'''
+
+# For with a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print("Fruit:", fruit)
+
+# For with range()
+# range(start, stop, step)
+for i in range(1, 6):      # 1 to 5
+    print("i =", i)
+
+for i in range(0, 10, 2):  # 0, 2, 4, 6, 8 (step of 2)
+    print("Even:", i)
+
+# For with break
+for i in range(10):
+    if i == 5:
+        print("Reached 5, breaking!")
+        break
+    print(i)
+
+# For with continue
+for i in range(6):
+    if i == 3:
+        continue  # skip 3
+    print("Value:", i)
+
+#for counter words
+sentence = "Hello world"
+for word in range(len(sentence.split(" "))):
+    print("Word:", word)
+
+#numeros primos
+
+num = int(input("Enter a number: "))
+if num > 1:
+    for i in range(2, num):
+        if (num % i) == 0:#revisa el residuo si el residuo es 0 entonces no es primo
+            print(num, "is not a prime number")
+            break
+    else:
+        print(num, "is a prime number")
+
+word = "Python"
+for i in word:
+    for i in range(len(word)):
+        print(i, end = " ")
+        break
+
+fruit = ("apple", "orange", "kiwi")
+adjetive = ("tasty", "healthy")
+
+for f in fruit:
+    for a in adjetive:
+        print(f"{f} {a}")
+
+list= []
+
+for f in list:
+    pass
+
 #functions
 
 "def my_function ():"
@@ -1098,3 +1206,213 @@ match prepro:
         print(f"No cuenta con descuento, El precio final es: {prepro}")
         
 #Sangria = espacios que se dejan o en termino programacion indentacion.
+
+#while and for
+
+#While
+#1
+num = 1
+while num < 100:
+    print(f"{num} + 1 ")
+    num += 1
+    print(num)
+    
+#2
+suma_total = 0
+num = int(input("Escriba un numero o escriba 0 para finalizar: "))
+
+while num != 0:
+    suma_total += num 
+    num = int(input("Escriba otro numero o escriba 0 para finalizar: "))
+
+print(f"La suma de todos los numeros ingresados es: {suma_total}")
+
+#3
+Res = (input("Desea continuar con el programa: "))
+while Res == "Sí":
+    Res = (input("Desea continuar con el programa: "))
+print("Programa finalizado")
+
+#4
+password = (input("Ingrese la contraseña: "))
+confirpassword = (input("confirme la contraseña: "))
+while password != confirpassword:
+    print("No coinciden las contraseñas digitelas nuevamente")
+    password = (input("Ingrese la contraseña: "))
+    confirpassword = (input("confirme la contraseña: "))
+print("las contraseñas coinciden")
+
+#5
+sum_total = 0
+
+while sum_total <= 100000:
+    cantidad_ingresada = int(input("Digite la cantidad de dinero que desea guardar en la alcancia: "))
+    sum_total += cantidad_ingresada
+print(f"el total ahorrado es {sum_total}")
+
+#6
+num = 0
+num_final = int(input("Digite un numero: "))
+
+while num <= num_final:
+       print(num, end = " ")
+       num += 2
+       
+#7
+intentos = 1
+password = (input("Ingrese la contraseña: "))
+confirpassword = (input("confirme la contraseña: "))
+while password != confirpassword:
+    if intentos == 3:
+        print("Has superado el máximo de 3 intentos. Acceso bloqueado.")
+        break 
+    print("No coinciden las contraseñas digitelas nuevamente")
+    password = (input("Ingrese la contraseña: "))
+    confirpassword = (input("confirme la contraseña: "))
+    intentos += 1
+    
+if password == confirpassword:
+    print("Las contraseñas coinciden. Acceso concedido.")
+    
+#8
+sum_total = 0
+
+while sum_total <= 100000:
+    cantidad_ingresada = int(input("Digite la cantidad de dinero que desea guardar en la alcancia: "))
+    if cantidad_ingresada > 0:
+        sum_total += cantidad_ingresada
+    else:
+        print("Error: No puedes ingresar cantidades negativas o cero.")
+print(f"el total ahorrado es {sum_total}")
+
+#9
+a, b = 0, 1
+contador = 0
+
+print("Los primeros 10 números de Fibonacci son:")
+while contador < 10:
+    print(a, end=" ")
+    a, b = b, a + b
+    contador += 1
+
+#For
+#1
+
+mess = (input("Digite una palabra: "))
+print(mess[::-1])
+
+#2
+texto = input("Digite un texto: ")
+contador = 0
+
+for t in texto:
+    contador += 1
+
+print(f"El texto tiene {contador} caracteres.")
+
+#3
+texto = input("Digite un texto: ")
+contador_vocales = 0
+vocales = "aeiouAEIOU"
+
+for l in texto:
+    if l in vocales:
+        contador_vocales += 1
+
+print(f"El texto tiene {contador_vocales} vocales.")
+
+#4
+palabra = input("Digite la palabra: ")
+numero = int(input("Digite el número de veces: "))
+
+for i in range(numero):
+    print(palabra)
+    
+#5
+message = "Fundamentos en Python"
+print(message[3:7])
+print(message[12:17])
+
+#6
+
+#lower =caracteres en mayuscula a minuscla
+#replace eliminar huecos entre palabras
+frase = (input("Ingrese una frase: "))
+procesada = frase.lower().replace(" ", "")
+invertida = procesada[::-1]
+
+if procesada == invertida:
+    print(f"'{frase}' es un palíndromo.")
+    print(f"Al revés se lee: {invertida}")
+else:
+    print(f"'{frase}' no es un palíndromo.")
+    print(f"Normal: {procesada} | Al revés: {invertida}")
+    
+#7
+palabra = (input("Ingrese una palabra: "))
+resultado = palabra.title()
+print(resultado)
+
+#8
+cadena = (input("Escribe una cadena: "))
+new = (input("caracter a nuevo: "))
+old = (input("caracter a cambiar: "))
+
+resul = cadena.replace(old, new)
+print(resul)
+
+#9
+#len contar los elementos de lista
+#split dividir la frase por espacios
+frase = (input("Escribe una frase: "))
+num_p = len(frase.split())
+print(num_p)
+
+#10
+#f es float y el 2 es para solo tomar los 2 primeros decimales
+num =3.121333
+formateado = f"{num:.2f}"
+print(formateado)
+
+#11
+cadena = (input("Digite una cadena: "))
+frecuencia= {}
+
+for l in cadena:
+    frecuencia[l] = frecuencia.get(l, 0) + 1
+    print(frecuencia)
+
+
+#12
+#sorted para ordenar
+pal1 = (input("Digite la primera palabra: "))
+pal2 = (input("Digite la segunda palabra: "))
+
+es_anagrama = sorted(pal1) == sorted(pal2)
+print(f"son anagramas? {es_anagrama}")
+
+#13
+cadena = (input("Digite la cadena"))
+inicio = 0
+max_largo = 0 
+posiciones = {}
+
+for i, letra in enumerate(cadena):
+    if letra in posiciones and posiciones[letra]>= inicio:
+        inicio = posiciones [letra] + 1
+    posiciones[letra] = i
+    max_largo = max(max_largo,i - inicio + 1)
+print(f"largo del substring mas largo:{max_largo}")
+
+
+#14
+nombre_completo = (input("Escriba su nombre completo"))
+partes = nombre_completo.split()
+
+formato = f"{partes[-1]}, {partes[0][0]}"
+print(formato)
+
+#15
+cadena = (input("Digite la cadena: "))
+limpia = "".join(caracter for caracter in cadena if caracter.isalnum())
+print(limpia)
