@@ -964,7 +964,7 @@ print(True or False)
 print(False or False)
 print(False or True)
 
-#Realizar un programa inicuo se sesion
+#Login pogram
 x = 5
 y = 3
 if x > y:
