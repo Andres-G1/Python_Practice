@@ -43,4 +43,4 @@ print("Hello i am"+ name + "and i am" + str(Age) + "years old" )
 # if you complete the exercise up the exercise to github using git as intermediary,
 # and share the link to the theacher. 
 
-#Congratulations you complete the Day-01.q<
+#Congratulations you complete the Day-01.

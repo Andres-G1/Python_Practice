@@ -37,3 +37,14 @@ elif Age > 18 and age < 30:
     print("You are adult")
 else:
     print("You are old")
+
+#Exercise
+
+#(1)Create two exercise with if.
+#(2)Create two exercise with elif.
+#(3)Explain the code using (# or ''')
+
+# if you complete the exercise up the exercise to github using git as intermediary,
+# and share the link to the theacher. 
+
+#Congratulations you complete the Day-04.
